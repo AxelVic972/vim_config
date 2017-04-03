@@ -1,4 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/home/axelv'
 let g:netrw_dirhist_2='/home/axelv/Projects/axoun.github.io'
+let g:netrw_dirhist_3='/home/axelv/.vim/autoload/vital'
+let g:netrw_dirhist_4='/home/axelv/.vim/autoload'
+let g:netrw_dirhist_5='/home/axelv/Projects/AndroidStudioProjects/WheresCage/app'
+let g:netrw_dirhist_6='/home/axelv/Projects/AndroidStudioProjects/WheresCage'

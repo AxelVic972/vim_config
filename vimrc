@@ -1,19 +1,17 @@
 " General
 set number
 set wrap
-set lines=35 columns=150
+set lines=35 columns=101
 set colorcolumn=90
 
 " Mapping
 let mapleader=" "
-map <leader>s :source ~/.vimrc<CR>
-noremap - ddp
-noremap _ dd2kp
+map <leader>s :source ~/.vimrc<CR>:noh<CR>
+"noremap - ddp
+"noremap _ dd2kp
 inoremap jk <esc>
-map <leader>r 0i"<esc>:w<CR>:noh<CR>:echo "Refreshed"<CR>
-map <leader> <nop>
 map <leader><leader> :bn<cr>
-
+map <F7> mzgg=G`z
 
 "Vim hardcore mode
 nnoremap <up> <nop>
@@ -47,6 +45,7 @@ set shiftwidth=2
 set expandtab
 set smartindent
 set autoindent
+set showcmd
 
 " Faster movement
 map <C-l> <C-w>l
@@ -56,19 +55,20 @@ map <C-w> <C-w>w
 
 " Useful but random
 set showmatch
+set matchtime=0
 
 "Plugins
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'bling/vim-airline'
-Plugin 'mattn/emmet-vim'
-call vundle#end()
-filetype plugin indent on
+call plug#begin('~/.vim/plugged')
+Plug 'bling/vim-airline'
+Plug 'mattn/emmet-vim', { 'for' : ['html','jsp'] }
+Plug '907th/vim-auto-save'
+Plug 'tpope/vim-surround'
+call plug#end()
 
 " Airline
 set laststatus=2
 
-" Emmet
-let g:user_emmet_leader_key='<leader>'
+" AutoSave
+let g:auto_save = 1
+let g:auto_save_in_insert_mode = 0
+
